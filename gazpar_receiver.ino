@@ -54,11 +54,8 @@ void radioSetup(){
   radio.begin();  
   radio.setChannel(0); 
   radio.setPALevel(RF24_PA_MIN);
-  //radio.openReadingPipe(0, adresse); 
-  
-
   radio.openReadingPipe(1, node_address);
-  //radio.openWritingPipe(server_address);
+
   radio.startListening();  
   DEBUG_RADIO();
 
